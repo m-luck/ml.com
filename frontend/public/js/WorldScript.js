@@ -1,3 +1,7 @@
+// Thanks for checking out the globe script. This is Michael. Big thanks to edankwan for helping allow the vision to be realized. 
+// In this script there is code responsible for honing in on the coords of the places I am linking.
+
+// An object literal for quick configuration.
 var config = {
     percent: 0,
     lat: 0,
@@ -13,6 +17,12 @@ var config = {
 
     goToHongKong: function() {
         goTo(22.28552,114.15769);
+    },
+    goToSH: function() {
+        goTo(0.28552,114.15769);
+    },
+    goToUS: function() {
+        goTo(22.28552,0.15769);
     }
 };
 
@@ -49,14 +59,19 @@ var isMouseDown = false;
 var isTweening = false;
 var tick = 1;
 
+// Pictures 
 var URLS = {
+    // bg: 'https://images.unsplash.com/photo-1533113354171-490d836238e3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1575&q=80',
     bg: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/6043/css_globe_bg.jpg',
+    // bg: 'https://images.unsplash.com/photo-1518818419601-72c8673f5852?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjIxMTIzfQ&auto=format&fit=crop&w=1050&q=80',
     diffuse: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/6043/css_globe_diffuse.jpg',
     halo: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/6043/css_globe_halo.png',
 };
 
+// Transforms
 var transformStyleName = PerspectiveTransform.transformStyleName;
 
+// Add classes
 function init(ref) {
 
     world = document.querySelector('.world');
@@ -72,13 +87,15 @@ function init(ref) {
     regenerateGlobe();
 
     var gui = new dat.GUI();
-    gui.add(config, 'lat', -90, 90).listen();
-    gui.add(config, 'lng', -180, 180).listen();
-    gui.add(config, 'isHaloVisible');
-    gui.add(config, 'isPoleVisible');
-    gui.add(config, 'autoSpin');
+    // gui.add(config, 'lat', -90, 90).listen();
+    // gui.add(config, 'lng', -180, 180).listen();
+    // gui.add(config, 'isHaloVisible');
+    // gui.add(config, 'isPoleVisible');
+    // gui.add(config, 'autoSpin');
     gui.add(config, 'goToHongKong');
-    gui.add(config, 'zoom', 0, 1).listen();
+    gui.add(config, 'goToSH');
+    gui.add(config, 'goToUS');
+    // gui.add(config, 'zoom', 0, 1).listen();
 
     stats = new Stats();
     stats.domElement.style.position = 'absolute';
@@ -129,9 +146,11 @@ function onMouseUp(evt) {
 }
 
 function regenerateGlobe() {
+    // Document Object Model
     var dom, domStyle;
     var x, y;
     globeDoms = [];
+    // Remove everything
     while (dom = globeContainer.firstChild) {
         globeContainer.removeChild(dom);
     }
@@ -139,6 +158,7 @@ function regenerateGlobe() {
     var segX = config.segX;
     var segY = config.segY;
     var diffuseImgBackgroundStyle = 'url(' + URLS.diffuse + ')';
+    // Bitwise or
     var segWidth = 1600 / segX | 0;
     var segHeight = 800 / segY | 0;
 
@@ -174,6 +194,7 @@ function regenerateGlobe() {
         vertices.push( verticesRow );
     }
 
+    // Draw the globe
     for ( y = 0; y < segY; ++y ) {
         for ( x = 0; x < segX; ++x ) {
             dom = document.createElement('div');
@@ -213,6 +234,7 @@ function render() {
     rX = config.lat / 180 * Math. PI;
     rY = (clampLng(config.lng)  - 270) / 180 * Math. PI;
 
+    // Some ternary operations
     globePole.style.display = config.isPoleVisible ? 'block' : 'none';
     globeHalo.style.display = config.isHaloVisible ? 'block' : 'none';
 
@@ -227,6 +249,7 @@ function render() {
 }
 
 function clamp(x, min, max) {
+    // Some nested ternary shit going on here.
     return x < min ? min : x > max ? max : x;
 }
 
@@ -304,7 +327,7 @@ function goTo(lat, lng) {
     var roughDistance = Math.sqrt(dX * dX + dY * dY);
     isTweening = true;
     TweenMax.to(config, roughDistance * 0.01, {lat: lat, lng: lng, ease:'easeInOutSine'});
-    TweenMax.to(config, 1, {delay: roughDistance * 0.01, zoom: 1, ease:'easeInOutSine', onComplete: function(){
+    TweenMax.to(config, 1, {delay: roughDistance * 0.01, zoom: 0.1, ease:'easeInOutSine', onComplete: function(){
         isTweening = false;
     }});
 }
@@ -323,7 +346,7 @@ function rotate(vertex, x, y, z) {
     vertex.py = y0 * offset;
 }
 
-// shameless stole and edited from threejs CanvasRenderer
+// from threejs CanvasRenderer
 function expand( v1, v2 ) {
 
     var x = v2.px - v1.px, y = v2.py - v1.py,

@@ -2,11 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import WorldComponent from './WorldComponent'
+import Overlay from './Overlay/Overlay'
+import WorldComponent from './WorldComponent/WorldComponent'
 import * as serviceWorker from './serviceWorker';
 
 // ReactDOM.render(<App />, document.getElementById('root'));
+
 ReactDOM.render(<WorldComponent/>, document.getElementById('world'));
+ReactDOM.render(<Overlay/>, document.getElementById('overlay'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

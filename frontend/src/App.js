@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import './WorldComponent.jsx'
+import './WorldComponent/WorldComponent.jsx'
 
 function App() {
   return (
