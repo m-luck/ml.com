@@ -8,9 +8,14 @@ class Overlay extends React.Component {
         return(
         <div className="overlay">
             <MichaelLogo/>
-            <FeaturedItem itemName="TimeHere" 
+            <FeaturedItem 
+                cId="th"
+                itemName="TimeHere" 
                 itemSub="A generated document to preserve life's values and stories. For those you wish to know more."
-                itemDesc="Lorem ispum"/>
+                itemDesc="Lorem ispum" 
+                clickFunc="goTo"
+                clickArgs="[22.0, 22.0]"
+                />
             <FeaturedItem/>
             <FeaturedItem/>
         </div>
