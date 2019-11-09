@@ -8,20 +8,20 @@ class FeaturedItem extends React.Component {
     }
     render() { 
         return (
-            <div>
+            <div className="featuredItem">
                 <h2>{this.props.itemName}</h2>
                 <h3>{this.props.itemSub}</h3>
                 <p>{this.props.itemDesc}</p>
-                <Button id="{this.props.cId}" variant="contained" color="default">GO</Button>
+                <Button width="100px" id={this.props.cId} variant="contained" color="default">LEARN MORE</Button>
             </div>
         );
     }
 
     componentDidMount() {
-        let fun = this.props.clickFunc
-        let args = this.props.clickArgs
+        let fun = this.props.func
+        let args = this.props.funcArgs
         if (this.props.cId != null) {
-            document.getElementById("{this.props.cId}").onclick = function() {
+            document.getElementById(""+this.props.cId).onclick = function() {
                 window[fun](...eval(args));
             };
         }

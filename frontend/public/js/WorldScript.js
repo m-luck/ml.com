@@ -6,8 +6,8 @@ var config = {
     percent: 0,
     lat: 0,
     lng: 0,
-    segX: 14,
-    segY: 12,
+    segX: 9,
+    segY: 9,
     isHaloVisible: true,
     isPoleVisible: true,
     autoSpin: true,
@@ -64,7 +64,7 @@ var URLS = {
     // bg: 'https://images.unsplash.com/photo-1533113354171-490d836238e3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1575&q=80',
     bg: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/6043/css_globe_bg.jpg',
     // bg: 'https://images.unsplash.com/photo-1518818419601-72c8673f5852?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjIxMTIzfQ&auto=format&fit=crop&w=1050&q=80',
-    diffuse: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/6043/css_globe_diffuse.jpg',
+    diffuse: '../img/css_globe_diffuse.jpg',
     halo: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/6043/css_globe_halo.png',
 };
 
@@ -86,22 +86,22 @@ function init(ref) {
 
     regenerateGlobe();
 
-    var gui = new dat.GUI();
+    // var gui = new dat.GUI();
     // gui.add(config, 'lat', -90, 90).listen();
     // gui.add(config, 'lng', -180, 180).listen();
     // gui.add(config, 'isHaloVisible');
     // gui.add(config, 'isPoleVisible');
     // gui.add(config, 'autoSpin');
-    gui.add(config, 'goToHongKong');
-    gui.add(config, 'goToSH');
-    gui.add(config, 'goToUS');
+    // gui.add(config, 'goToHongKong');
+    // gui.add(config, 'goToSH');
+    // gui.add(config, 'goToUS');
     // gui.add(config, 'zoom', 0, 1).listen();
 
-    stats = new Stats();
-    stats.domElement.style.position = 'absolute';
-    stats.domElement.style.left = 0;
-    stats.domElement.style.top = 0;
-    document.body.appendChild( stats.domElement );
+    // stats = new Stats();
+    // stats.domElement.style.position = 'absolute';
+    // stats.domElement.style.left = 0;
+    // stats.domElement.style.top = 0;
+    // document.body.appendChild( stats.domElement );
 
     // events
     world.ondragstart = function () {return false;};
@@ -220,15 +220,15 @@ function regenerateGlobe() {
 
 function loop() {
     requestAnimationFrame(loop);
-    stats.begin();
+    // stats.begin();
     render();
-    stats.end();
+    // stats.end();
 }
 
 function render() {
 
     if(config.autoSpin && !isMouseDown && !isTweening) {
-        config.lng = clampLng(config.lng - 0.2);
+        config.lng = clampLng(config.lng - 0.025);
     }
 
     rX = config.lat / 180 * Math. PI;
@@ -326,8 +326,8 @@ function goTo(lat, lng) {
     var dY = lng - config.lng;
     var roughDistance = Math.sqrt(dX * dX + dY * dY);
     isTweening = true;
-    TweenMax.to(config, roughDistance * 0.01, {lat: lat, lng: lng, ease:'easeInOutSine'});
-    TweenMax.to(config, 1, {delay: roughDistance * 0.01, zoom: 0.1, ease:'easeInOutSine', onComplete: function(){
+    TweenMax.to(config, roughDistance * 0.01, {zoom: 0.1, lat: lat, lng: lng, ease:'easeInOutSine'});
+    TweenMax.to(config, 1, {delay: roughDistance * 0.01, zoom: 0.3, ease:'easeInOutSine', onComplete: function(){
         isTweening = false;
     }});
 }

@@ -1,5 +1,28 @@
 .overlay {
     position: fixed;
+    padding: 2em 2em 2em 2em;
     float: right;
     z-index: 1;
 }
+
+.featured {
+    height: 50vh;
+    overflow: auto;
+}
+
+
+.scroll4::-webkit-scrollbar {
+    width: 30px;
+  }
+   
+  .scroll4::-webkit-scrollbar-thumb {
+    background: rgba(102,102,102,0.6);
+    border-radius: 10px;
+  }
+  
+  .scroll4::-webkit-scrollbar-track {
+    background: rgba(10,10,10, 0.7);
+    border-radius: 10px;
+  }
+  
+  

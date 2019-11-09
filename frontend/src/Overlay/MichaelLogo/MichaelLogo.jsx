@@ -3,8 +3,10 @@ import './MichaelLogo.css';
 
 function MichaelLogo() {
     return (
-        <div> 
-            <h1>Michael Lukiman</h1>
+        <div className="MichaelLogo"> 
+            <a href=".">
+                <img src="./img/ml.png" width="100em" alt="michael lukiman"/>
+            </a>
         </div>
     );
 }
