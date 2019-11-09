@@ -4,8 +4,8 @@
   "description": "Author: Michael Lukiman. My new website for 2020. Ending a 10 year reign of iterations of a professor-grade simple site.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "concurrently \"cd backend && node server.js\" \"cd frontend && react-scripts start\"",
+      "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently \"cd backend && node server.js\" \"cd frontend && react-scripts start\""
   },
   "repository": {
     "type": "git",
