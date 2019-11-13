@@ -18,11 +18,14 @@ class FeaturedItem extends React.Component {
     }
 
     componentDidMount() {
-        let fun = this.props.func
-        let args = this.props.funcArgs
+        let fun = this.props.func;
+        let args = this.props.funcArgs;
+        let infoHTML = this.props.infoHTML;
         if (this.props.cId != null) {
             document.getElementById(""+this.props.cId).onclick = function() {
                 window[fun](...eval(args));
+                document.getElementById("information").innerHTML = "" + infoHTML;
+                document.getElementById("information").style.visibility = "visible";
             };
         }
     }
