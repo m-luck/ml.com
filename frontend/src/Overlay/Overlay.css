@@ -1,8 +1,10 @@
+
 .overlay {
     position: fixed;
     padding: 2em 2em 2em 2em;
     float: right;
     z-index: 1;
+    color: white;
 }
 
 .featured {
@@ -39,5 +41,103 @@
     background: rgba(10,10,10, 0.7);
     border-radius: 10px;
   }
+
+@media (max-width: 2048px) {
+
+.overlay {
+    position: fixed;
+    padding: 2em 2em 2em 2em;
+    float: right;
+    z-index: 1;
+    color: white;
+}
+
+.featured {
+    height: 99vh;
+    margin: 20px;
+    overflow: auto;
+    float: left;
+    position: fixed;
+    top: 0px;
+    left: 100px;
+}
+
+#information {
+    overflow: auto;
+    position: fixed;
+    float: right;
+    right: 10vw;
+    padding: 20px 20px 20px 20px;
+    background: rgba(10,10,10, 0.7);
+    visibility: hidden;
+    width: 40vw;
+    border-radius: 9px;
+}
+
+.scroll4::-webkit-scrollbar {
+    width: 30px;
+  }
+   
+  .scroll4::-webkit-scrollbar-thumb {
+    background: rgba(102,102,102,0.6);
+    border-radius: 10px;
+  }
   
+  .scroll4::-webkit-scrollbar-track {
+    background: rgba(10,10,10, 0.7);
+    border-radius: 10px;
+  }
   
+}
+
+@media (max-width: 1024px) {
+
+.overlay {
+    position: fixed;
+    padding: 2em 2em 2em 2em;
+    float: right;
+    z-index: 1;
+    color: white;
+    bottom: 1vh;
+}
+
+.featured {
+    height: 99vh;
+    margin: 20px;
+    overflow: auto;
+    float: left;
+    position: fixed;
+    width: 80vw;
+    top: 0px;
+    left: 80px;
+}
+
+#information {
+    position: fixed;
+    top: 7vh;
+    padding: 20px 20px 20px 20px;
+    background: rgba(10,10,10, 0.8);
+    margin: auto;
+    visibility: hidden;
+    width: 80vw;
+    border-radius: 9px;
+    overflow: auto;
+    height: 20vh;
+}
+
+.scroll4::-webkit-scrollbar {
+    width: 30px;
+  }
+   
+  .scroll4::-webkit-scrollbar-thumb {
+    background: rgba(102,102,102,0.85);
+    border-radius: 10px;
+  }
+  
+  .scroll4::-webkit-scrollbar-track {
+    background: rgba(10,10,10, 0.7);
+    border-radius: 10px;
+  }
+  
+}
+

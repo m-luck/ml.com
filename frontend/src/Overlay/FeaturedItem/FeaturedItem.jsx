@@ -12,7 +12,7 @@ class FeaturedItem extends React.Component {
                 <h2>{this.props.itemName}</h2>
                 <h3>{this.props.itemSub}</h3>
                 <p>{this.props.itemDesc}</p>
-                <Button width="100px" id={this.props.cId} variant="contained" color="default">LEARN MORE</Button>
+                <Button width="100px" id={this.props.cId} variant="contained" color="default">{this.props.buttonText}</Button>
             </div>
         );
     }

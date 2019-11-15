@@ -13,7 +13,7 @@ var config = {
     autoSpin: true,
     zoom: 0,
 
-    skipPreloaderAnimation: false,
+    skipPreloaderAnimation: true,
 
     goToHongKong: function() {
         goTo(22.28552,114.15769);
@@ -326,8 +326,8 @@ function goTo(lat, lng) {
     var dY = lng - config.lng;
     var roughDistance = Math.sqrt(dX * dX + dY * dY);
     isTweening = true;
-    TweenMax.to(config, roughDistance * 0.01, {zoom: 0.1, lat: lat, lng: lng, ease:'easeInOutSine'});
-    TweenMax.to(config, 1, {delay: roughDistance * 0.01, zoom: 0.3, ease:'easeInOutSine', onComplete: function(){
+    TweenMax.to(config, roughDistance * 0.08, {zoom: 0.1, lat: lat, lng: lng, ease:'easeInOutSine'});
+    TweenMax.to(config, 1, {delay: roughDistance * 0.08, zoom: 0.3, ease:'easeInOutSine', onComplete: function(){
         isTweening = false;
     }});
 }
