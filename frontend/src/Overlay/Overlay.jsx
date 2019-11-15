@@ -22,6 +22,7 @@ class Overlay extends React.Component {
                     itemDesc="Using predictive language modeling to assist lip reading vision networks."
                     func="goTo"
                     funcArgs="[40.6, -73.9]"
+                    flairsList="python,pytorch,datascience,ml,collaboration,cv,nlp"
                     infoHTML = 
                     "
                     <h3>
@@ -46,6 +47,7 @@ class Overlay extends React.Component {
                     itemDesc="A generated document to preserve life's values and stories. For those you wish to know more."
                     func="goTo"
                     funcArgs="[34.2, -118.6]"
+                    flairsList="python,react,stripe,express"
                     infoHTML=
                     "<h3>TimeHere</h3>
                     <p>Visit the site for more info.</p>"
