@@ -25,6 +25,19 @@
     -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />  
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <script type="application/javascript">window.addEventListener('resize', function(event){
+      let mq1024 = window.matchMedia( "(max-width: 1024px)" );
+      let mq2048 = window.matchMedia( "(max-width: 2048px)" );
+        if (mq2048.matches) {
+          document.getElementById("featured").style.left = "90px";
+          document.getElementById("close").style.visibility = "hidden";
+          if (mq1024.matches && document.getElementById("information").style.visibility == "visible") {
+            document.getElementById("featured").style.left = "-1000px";
+            document.getElementById("close").style.visibility = "visible";
+          }
+        }
+      });
+      </script>
 
     <title>Michael Lukiman's Bio</title>
   </head>

@@ -1,4 +1,11 @@
 
+#close {
+  visibility: hidden;
+  position: fixed;
+  top: 5vh;
+  left: 5vw;
+}
+
 .overlay {
     position: fixed;
     padding: 2em 2em 2em 2em;
@@ -14,7 +21,7 @@
     float: left;
     position: fixed;
     top: 0px;
-    left: 100px;
+    left: 90px;
 }
 
 #information {
@@ -52,14 +59,14 @@
     color: white;
 }
 
-.featured {
+#featured {
     height: 99vh;
     margin: 20px;
     overflow: auto;
     float: left;
     position: fixed;
     top: 0px;
-    left: 100px;
+    left: 90px;
 }
 
 #information {
@@ -101,7 +108,7 @@
     bottom: 1vh;
 }
 
-.featured {
+#featured {
     height: 99vh;
     margin: 20px;
     overflow: auto;
@@ -109,24 +116,25 @@
     position: fixed;
     width: 80vw;
     top: 0px;
-    left: 80px;
+    left: 90px;
 }
 
 #information {
     position: fixed;
-    top: 7vh;
+    top: 13vh;
     padding: 20px 20px 20px 20px;
     background: rgba(10,10,10, 0.8);
-    margin: auto;
     visibility: hidden;
-    width: 80vw;
+    width: 75vw;
     border-radius: 9px;
     overflow: auto;
-    height: 20vh;
+    max-height: 60vh;
 }
 
+
+
 .scroll4::-webkit-scrollbar {
-    width: 30px;
+    width: 2vw;
   }
    
   .scroll4::-webkit-scrollbar-thumb {

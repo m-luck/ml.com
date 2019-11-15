@@ -1,6 +1,7 @@
 import React from 'react';
 import MichaelLogo from './MichaelLogo/MichaelLogo';
 import FeaturedItem from './FeaturedItem/FeaturedItem';
+import Button from '@material-ui/core/Button'
 import './Overlay.css';
 
 class Overlay extends React.Component {
@@ -8,10 +9,11 @@ class Overlay extends React.Component {
     render() {
         return(
         <div className="overlay">
+            <Button id="close" variant="contained" color="default">HOME</Button>
             <div id="information" className="scroll4"></div>
             <MichaelLogo/>
             <h3>Featured<br></br>Items</h3>
-            <div className="featured scroll4">
+            <div id="featured" className="scroll4">
                 <FeaturedItem
                     cId="lipnet"
                     buttonText="LEARN MORE"
@@ -72,6 +74,13 @@ class Overlay extends React.Component {
             </div>
         </div>
         );
+    }
+
+    componentDidMount() {
+        document.getElementById("close").onclick = function() { 
+              document.getElementById("information").style.visibility = "hidden";
+              document.getElementById("featured").style.left = "90px";
+              document.getElementById("close").style.visibility = "hidden";}
     }
 }
 

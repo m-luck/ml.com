@@ -26,6 +26,11 @@ class FeaturedItem extends React.Component {
                 window[fun](...eval(args));
                 document.getElementById("information").innerHTML = "" + infoHTML;
                 document.getElementById("information").style.visibility = "visible";
+                let mq = window.matchMedia( "(max-width: 1024px)" );
+                if (mq.matches) {
+                    document.getElementById("featured").style.left = "-1000px";
+                    document.getElementById("close").style.visibility = "visible";
+                }
             };
         }
     }
