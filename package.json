@@ -30,7 +30,6 @@
     "react-dom": "latest",
     "react-scripts": "latest",
     "typeface-roboto": "latest",
-    "webpack": "latest"
   },
   "devDependencies": {
     "webpack-cli": "latest"
