@@ -2,6 +2,9 @@
   "name": "michaellukiman.com",
   "version": "1.0.0",
   "description": "Author: Michael Lukiman. My new website for 2020. Ending a 10 year reign of iterations of a professor-grade simple site.",
+  "engines": {
+    "node": "10.x"
+  },
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
