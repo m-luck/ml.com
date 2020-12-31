@@ -5,8 +5,8 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "concurrently \"cd backend && node server.js\" \"cd frontend && react-scripts start\"",
-    "build": "concurrently \"cd backend && react-scripts npm build\" \"cd frontend && npm run-script build\""
+    "start": "cd frontend && react-scripts start",
+    "build": "cd frontend && npm run-script build"
   },
   "repository": {
     "type": "git",
