@@ -4,18 +4,16 @@ import Flairs from '../Flairs/Flairs'
 import Button from '@material-ui/core/Button';
 
 class FeaturedItem extends React.Component {
-    constructor(props) {
-        super(props);
-    }
     render() { 
+        const { cId, buttonText, flairsList, itemInfo: { itemDesc, itemName, itemSub }} = this.props;
         return (
             <div className="featuredItem">
-                <h2>{this.props.itemName}</h2>
-                <h3>{this.props.itemSub}</h3>
-                <p>{this.props.itemDesc}</p>
-                <Button width="100px" id={this.props.cId} variant="contained" size="large" color="default">{this.props.buttonText}</Button>
+                <h2>{itemName}</h2>
+                <h3>{itemSub}</h3>
+                <p>{itemDesc}</p>
+                <Button width="100px" id={cId} variant="contained" size="large" color="default">{buttonText}</Button>
                 <p>
-                <Flairs flairsList={this.props.flairsList}/></p>
+                <Flairs flairsList={flairsList}/></p>
             </div>
         );
     }
