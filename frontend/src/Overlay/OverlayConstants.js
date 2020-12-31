@@ -15,6 +15,7 @@ const CODE_PROJECT = "CODE_PROJECT";
 const HARDWARE_PROJECT = "HARDWARE_PROJECT";
 const LIFESTYLE_PROJECT = "LIFESTYLE_PROJECT";
 
+
 // FLAIR TYPES
 
 export const COLLABORATION = "COLLABORATION";
@@ -52,8 +53,11 @@ export const LIPNET_INFO = {
             and natural language processing to predict speech.
         </p>
         <p>
-            Using a dataset which has self-referencing transcriptions, we can train a vision network to recognize utterances and export construct words.
-            Concatenating output of next-word prediction from GPT2, we can have the network take advantage of semantic insights to improve its overall prediction. 
+            Using a dataset which has self-referencing transcriptions,
+            we trained temporally-aware vision network to recognize utterances and export 
+            construct words. Concatenating output of next-word prediction from GPT, 
+            we can have the network take advantage of semantic insights to improve 
+            its overall prediction. We ran this on the NYU supercomputing cluster.
         </p>
     `,
     projectTypes: [CODE_PROJECT],
@@ -72,11 +76,21 @@ export const TIMEHERE_INFO = {
     funcArgs: {CALI_COORDS},
     itemDesc: "A generated document to preserve life's values and stories. For those you wish to know more.",
     itemName: "TimeHere",
-    itemSub: "For my mother.",
+    itemSub: "For my mother, and father.",
     infoHTML: `
         <h3>TimeHere</h3>
-            <p>Visit the site for more info.</p>"
-        />
+            <p>
+                A Python generated journal with different prompts 
+                per year of existence. Used to fill out passively,
+                and impart experiences and journals that might not
+                otherwise make it into conversation,
+                to be preserved in perpetuity.
+            </p>
+            <p>
+                I used college printer credits to print out
+                hundreds of these journal pages and gave 
+                these as gifts.
+            <p/>
     `,
     projectTypes: [CODE_PROJECT],
 }
@@ -91,18 +105,23 @@ export const AOEAI_INFO = {
     itemSub: "The grassroots Age of Empires AI.",
     infoHTML: `
         <h3>AlphaEmpires</h3>
-        <p>Introducing the world's first machine learning platform for Age of Empires.</p>"
+        <p>Introducing the world's first machine learning platform for Age of Empires.</p>
     `,
     projectTypes: [CODE_PROJECT],
 }
 
 export const NNGPU_INFO = {
+    buttonText: LEARN_MORE,
     cId: "nngpu",
     func: FUNC_GO_TO,
     funcArgs: NEW_YORK_COORDS,
     itemDesc: "A parallelized implementation of spiking neural networks using NVIDIA CUDA.",
     itemName: "Spiking Izkevich Networks on CUDA", 
     itemSub: "SNNs on GPUs.",
+    infoHTML: `
+        <h3>Izkevich Neurons on GPUs</h3>
+        <p>In CUDA, I parallelized the work of a spiking neuron simulation, speeding up the linear equivalent by 3x.</p>
+    `,
     projectTypes: [CODE_PROJECT],
 }
 
