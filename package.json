@@ -24,21 +24,15 @@
   },
   "homepage": "https://github.com/m-luck/michaellukiman.com#readme",
   "dependencies": {
-    "@material-ui/core": "^4.6.0",
-    "axios": "^0.18.1",
-    "body-parser": "^1.19.0",
-    "concurrently": "^5.0.0",
-    "cors": "^2.8.5",
-    "express": "^4.17.1",
-    "mongoose": "^5.7.8",
-    "morgan": "^1.9.1",
-    "react": "^16.5.0",
-    "react-dom": "^16.5.0",
-    "react-scripts": "1.1.5",
-    "typeface-roboto": "0.0.75",
-    "webpack": "^4.41.2"
+    "@material-ui/core": "latest",
+    "cors": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-scripts": "latest",
+    "typeface-roboto": "latest",
+    "webpack": "latest"
   },
   "devDependencies": {
-    "webpack-cli": "^3.3.10"
+    "webpack-cli": "latest"
   }
 }
