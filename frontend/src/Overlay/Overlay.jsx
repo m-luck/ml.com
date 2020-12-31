@@ -28,6 +28,28 @@ class Overlay extends React.Component {
                     funcArgs={constants.NEW_YORK_COORDS}
                     itemInfo={constants.LIPNET_INFO}
                 />
+                <FeaturedItem
+                cId="thissite"
+                buttonText="LEARN MORE"
+                itemName="michaellukiman.com" 
+                itemSub="A new site."
+                itemDesc="Time to make things more detailed."
+                func="goTo"
+                funcArgs="[40.6, -73.9]"
+                flairsList="react,express"
+                infoHTML = 
+                "
+                <h3>
+                    michaellukiman.com
+                </h3>
+                <p>
+                    When I was 14 years old, my website looked good. Then it looked great. Then, I made it pure HTML.
+                </p>
+                <p>
+                    'Why did I leave it like that?', I thought to myself.
+                </p>
+                "
+                />
                 <FeaturedItem 
                     buttonText={constants.PURCHASE}
                     cId="th"

@@ -78,7 +78,7 @@
     background: rgba(10,10,10, 0.7);
     visibility: hidden;
     width: 40vw;
-    border-radius: 9px;
+    border-radius: 5px;
 }
 
 .scroll4::-webkit-scrollbar {
@@ -126,7 +126,7 @@
     background: rgba(10,10,10, 0.8);
     visibility: hidden;
     width: 75vw;
-    border-radius: 9px;
+    border-radius: 5px;
     overflow: auto;
     max-height: 60vh;
 }
