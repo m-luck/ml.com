@@ -1,66 +1,71 @@
 import React from 'react';
-import './Flairs.css';
 import Button from '@material-ui/core/Button';
-import red from '@material-ui/core/colors/red';
 
+import './Flairs.css';
+import * as constants from '../OverlayConstants';
 
 class Flairs extends React.Component {
-    constructor(props) {
-        super(props);
-        const cred = red[500];
-    }
 
-    returnButton(text, color) {
+    getButton(text, color) {
+
         return (
-            <span> <Button disabled size="small" style={{color: color, border:"1px solid", borderColor: color, opacity: 0.8, fontSize: "9px"}}>{text}</Button> </span>
+            <span>
+                <Button 
+                    disabled
+                    size="small"
+                    style={
+                        {
+                            border:"1px solid",
+                            borderColor: color,
+                            color: color,
+                            fontSize: "9px",
+                            opacity: 0.8,
+                        }
+                    }
+                >
+                    {text}
+                </Button>
+            </span>
         )
+
     }
+
+    getFlair(flair) {
+
+        switch (flair) {
+            case constants.COLLABORATION:
+                return (this.getButton("collaboration", "purple"));
+            case constants.COMPUTER_VISION:
+                return (this.getButton("computer vision", "#2288FF"));
+            case constants.EXPRESS:
+                return (this.getButton("express.js", "#11AA00"));
+            case constants.MACHINE_LEARNING:
+                return (this.getButton("machine learning", "red"));
+            case constants.NATURAL_LANGUAGE_PROCESSING:
+                return (this.getButton("natural language processing", "#11EE33"));
+            case constants.PYTHON:
+                return (this.getButton("python", "yellow"));
+            case constants.PYTORCH:
+                return (this.getButton("pytorch", "orange"));
+            case constants.REACT:
+                return (this.getButton("react.js", "skyblue"));
+            case constants.STRIPE:
+                return (this.getButton("stripe.js", "white"));
+            default:
+                return undefined
+        }
+
+    }
+
     render() {
-        var builder = [];
-        let flairs = this.props.flairsList;
-        if (flairs != null) {
-            var flairray = flairs.split(",");
 
-            if (flairray.includes("python")) {
-                builder.push(this.returnButton("python 3", "yellow"));
-            }
-            
-            if (flairray.includes("pytorch")) {
-                builder.push(this.returnButton("pytorch", "orange"));
-            }
+        const builder = [];
+        const flairs = this.props.flairsList;
 
-            
-            if (flairray.includes("cv")) {
-                builder.push(this.returnButton("computer vision", "#2288FF"));
-            }
-
-            
-            if (flairray.includes("nlp")) {
-                builder.push(this.returnButton("NLP", "#11EE33"));
-            }
-
-            
-            if (flairray.includes("stripe")) {
-                builder.push(this.returnButton("stripe", "white"));
-            }
-
-            
-            if (flairray.includes("ml")) {
-                builder.push(this.returnButton("ml engineering", "red"));
-            }
-
-            
-            if (flairray.includes("collaboration")) {
-                builder.push(this.returnButton("collaboration", "purple"));
-            }
-
-            if (flairray.includes("react")) {
-                builder.push(this.returnButton("react.js", "skyblue"));
-            }
-
-            if (flairray.includes("express")) {
-                builder.push(this.returnButton("express.js", "#11AA00"));
-            }
+        if (flairs && flairs.length) {
+            flairs.forEach(flair => {
+                builder.push(this.getFlair(flair))
+            })
         }
         
         return(builder);

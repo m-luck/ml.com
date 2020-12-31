@@ -3,10 +3,6 @@ import './WorldComponent.css';
 
 class WorldComponent extends React.Component   {
 
-    constructor(props) {
-        super(props);
-    }
-
     render() { 
         return (
             <div className="WorldComponent">
