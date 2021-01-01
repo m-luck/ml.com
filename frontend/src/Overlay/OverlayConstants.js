@@ -161,36 +161,36 @@ export const items = [
             IN_PROGRESS,
         ],
     },
-    // {
-    //     buttonText: LEARN_MORE,
-    //     cId: "cornlapse",
-    //     flairsList: [
-    //         NETWORKING,
-    //         BIOLOGY,
-    //     ],
-    //     func: FUNC_GO_TO,
-    //     funcArgs: CALI_COORDS,
-    //     itemDesc: "Corn is the backbone of US agriculture.",
-    //     itemName:"Cornlapse", 
-    //     itemSub: "A Timelapse of Corn",
-    //     infoHTML: `
-    //         <h3>
-    //             Cornlapse
-    //         </h3>
-    //         <p>
-    //             Corn is a staple crop. Knowing to grow it and empathize with its trifles would be prudent. Using ffmpeg, we can now see the beauty of plant growth.
-    //             Raspberry Pi, a webcam, and some ssh magic.
-    //             And of course, corn, dirt, and love (?). Shots every 6 world minutes, and 24 shots per video second. This is a foundation to automated, custom gardening / farming.
-    //         </p>
-    //     `,
-    //     projectTypes: [
-    //         CODE_PROJECT,
-    //         LIFESTYLE_PROJECT
-    //     ],
-    //     statusList: [
-    //         ACTIVE,
-    //     ],
-    // },
+    {
+        buttonText: LEARN_MORE,
+        cId: "cornlapse",
+        flairsList: [
+            NETWORKING,
+            BIOLOGY,
+        ],
+        func: FUNC_GO_TO,
+        funcArgs: CALI_COORDS,
+        itemDesc: "Corn is the backbone of US agriculture.",
+        itemName:"Cornlapse", 
+        itemSub: "A Timelapse of Corn",
+        infoHTML: `
+            <h3>
+                Cornlapse
+            </h3>
+            <p>
+                Corn is a staple crop. Knowing to grow it and empathize with its trifles would be prudent. Using ffmpeg, we can now see the beauty of plant growth.
+                Raspberry Pi, a webcam, and some ssh magic.
+                And of course, corn, dirt, and love (?). Shots every 6 world minutes, and 24 shots per video second. This is a foundation to automated, custom gardening / farming.
+            </p>
+        `,
+        projectTypes: [
+            CODE_PROJECT,
+            LIFESTYLE_PROJECT
+        ],
+        statusList: [
+            ACTIVE,
+        ],
+    },
     {
         buttonText: LEARN_MORE,
         cId: "remoteBlinds",
@@ -268,41 +268,41 @@ export const items = [
             GRADUATE_SCHOOL_APPROVED,
         ],
     },
-    {
-        buttonText: PURCHASE,
-        cId: "th",
-        flairsList: [
-            EXPRESS,
-            PYTHON,
-            REACT,
-            STRIPE,
-        ],
-        func: FUNC_GO_TO,
-        funcArgs: CALI_COORDS,
-        itemDesc: "A generated document to preserve life's values and stories. For those you wish to know more.",
-        itemName: "TimeHere",
-        itemSub: "For my mother, and father.",
-        infoHTML: `
-            <h3>TimeHere</h3>
-            <p>
-                A Python generated journal with different prompts 
-                per year of existence. Used to fill out passively,
-                and impart experiences and journals that might not
-                otherwise make it into conversation,
-                to be preserved in perpetuity.
-            </p>
-            <p>
-                I used college printer credits to print out
-                hundreds of these journal pages and gave 
-                these as gifts.
-            <p/>
-        `,
-        projectTypes: [CODE_PROJECT],
-        statusList: [
-            ACTIVE,
-            IN_PROGRESS,
-        ],
-    },
+    // {
+    //     buttonText: PURCHASE,
+    //     cId: "th",
+    //     flairsList: [
+    //         EXPRESS,
+    //         PYTHON,
+    //         REACT,
+    //         STRIPE,
+    //     ],
+    //     func: FUNC_GO_TO,
+    //     funcArgs: CALI_COORDS,
+    //     itemDesc: "A generated document to preserve life's values and stories. For those you wish to know more.",
+    //     itemName: "TimeHere",
+    //     itemSub: "For my mother, and father.",
+    //     infoHTML: `
+    //         <h3>TimeHere</h3>
+    //         <p>
+    //             A Python generated journal with different prompts 
+    //             per year of existence. Used to fill out passively,
+    //             and impart experiences and journals that might not
+    //             otherwise make it into conversation,
+    //             to be preserved in perpetuity.
+    //         </p>
+    //         <p>
+    //             I used college printer credits to print out
+    //             hundreds of these journal pages and gave 
+    //             these as gifts.
+    //         <p/>
+    //     `,
+    //     projectTypes: [CODE_PROJECT],
+    //     statusList: [
+    //         ACTIVE,
+    //         IN_PROGRESS,
+    //     ],
+    // },
     {
         buttonText: LEARN_MORE,
         cId: "aoeai",
