@@ -24,21 +24,15 @@ class Overlay extends React.Component {
     renderFeatureList() { 
         return (
             <div id="featured" className="scroll4">
-                <FeaturedItem
-                    itemInfo={constants.LIPNET_INFO}
-                />
-                <FeaturedItem
-                    itemInfo={constants.THIS_SITE_INFO}
-                />
-                <FeaturedItem 
-                    itemInfo={constants.TIMEHERE_INFO}
-                />
-                <FeaturedItem
-                    itemInfo={constants.AOEAI_INFO}
-                />
-                <FeaturedItem
-                    itemInfo={constants.NNGPU_INFO}
-                />
+                {
+                    constants.items.map(item =>
+                        (
+                            <FeaturedItem
+                                itemInfo={item}
+                            />
+                        )
+                    )
+                }
             </div>
         )
     }

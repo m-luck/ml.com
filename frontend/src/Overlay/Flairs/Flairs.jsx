@@ -33,16 +33,30 @@ class Flairs extends React.Component {
     getFlair(flair) {
 
         switch (flair) {
+            case constants.ANSIBLE:
+                return (this.getButton("ansible", "purplse"));
+            case constants.BIOLOGY:
+                return (this.getButton("biology", "green"));
             case constants.COLLABORATION:
                 return (this.getButton("collaboration", "purple"));
             case constants.COMPUTER_VISION:
                 return (this.getButton("computer vision", "#2288FF"));
+            case constants.DEVOPS:
+                return (this.getButton("DEVOPS", "orange"));
             case constants.EXPRESS:
                 return (this.getButton("express.js", "#11AA00"));
+            case constants.EMBEDDED_SYSTEMS:
+                return (this.getButton("embedded systems", "#11AA00"));
+            case constants.KUBERNETES:
+                return (this.getButton("KUBERNETES", "#2288FF"));
             case constants.MACHINE_LEARNING:
                 return (this.getButton("machine learning", "red"));
+            case constants.MECHANICS:
+                return (this.getButton("mechanics", "red"));
             case constants.NATURAL_LANGUAGE_PROCESSING:
                 return (this.getButton("natural language processing", "#11EE33"));
+            case constants.NETWORKING:
+                return (this.getButton("networking", "green"));
             case constants.PYTHON:
                 return (this.getButton("python", "yellow"));
             case constants.PYTORCH:
@@ -51,6 +65,8 @@ class Flairs extends React.Component {
                 return (this.getButton("react.js", "skyblue"));
             case constants.STRIPE:
                 return (this.getButton("stripe.js", "white"));
+            case constants.THREED_PRINTING:
+                return (this.getButton("3D PRINTING", "yellow"));
             default:
                 return undefined
         }
