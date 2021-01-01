@@ -49,13 +49,13 @@ class FeaturedItem extends React.Component {
 
         const {  
             itemInfo: { 
+                buttonText,
+                cId,
+                flairsList,
                 itemDesc,
                 itemName,
                 itemSub,
-                cId,
-                buttonText,
-                flairsList,
-
+                statusList,
             }
         } = this.props;
 
@@ -79,6 +79,7 @@ class FeaturedItem extends React.Component {
                 <p>
                     <Flairs flairsList={flairsList}/>
                 </p>
+                <Flairs flairsList={statusList}/>
 
             </div>
         );
