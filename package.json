@@ -30,11 +30,11 @@
     "morgan": "^1.9.1",
     "react": "^16.5.0",
     "react-dom": "^16.5.0",
-    "react-scripts": "1.1.5",
+    "react-scripts": "5.0.1",
     "typeface-roboto": "0.0.75",
-    "webpack": "^4.41.2"
+    "webpack": "^5.75.0"
   },
   "devDependencies": {
-    "webpack-cli": "^3.3.10"
+    "webpack-cli": "^5.0.1"
   }
 }
